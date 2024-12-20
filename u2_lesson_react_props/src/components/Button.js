@@ -1,7 +1,10 @@
 import React from 'react'
 
-function Button() {
-  return <button>Click Me</button>
+function Button(props) {
+  
+
+
+  return <button>{props.text}</button>
 }
 
 export default Button
