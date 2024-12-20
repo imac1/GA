@@ -1,14 +1,18 @@
 import React from 'react';
 
-const Name = ({ name }) => <h3>{name}</h3>;
-const Email = ({ email }) => <p>Email: {email}</p>;
-const Phone = ({ phone }) => <p>Phone: {phone}</p>;
 
-const Contact = ({ name, email, phone }) => (
-  <div className="contact">
-    <Name name={name} />
-    <Email email={email} />
-    <Phone phone={phone} />
-  </div>
-);
-export default Contact;
+export default function Contact (props) {
+ 
+
+  return (
+    <li className="contact-item" key={props.id}>
+        <h3>{props.firstName} {props.lastName}</h3>
+        <img src={props.image}/>
+        <h5>{props.gender}</h5>
+    
+
+
+    </li>
+) 
+
+}
