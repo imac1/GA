@@ -14,6 +14,7 @@ const App = () => {
       </div>
       <div className="bank">
         <Account name="Checking" />
+        <Account name="Savings" />
     
       </div>
     </div>
