@@ -1,14 +1,14 @@
-const Tasks = (props) => {
-
+const Tasks = ({ tasks, removeTask }) => {
   return (
-    <ul>
-      {props.tasks.map((task, index) => (
-        <li key={index}>
-          {task}
-        </li>
-      ))}
-    </ul>
-  )
-}
+      <ul>
+          {tasks.map((task, index) => (
+              <li key={index}>
+                  {task}
+                  <button onClick={() => removeTask(index)}>x</button>
+              </li>
+          ))}
+      </ul>
+  );
+};
 
-export default Tasks
+export default Tasks;

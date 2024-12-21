@@ -1,12 +1,14 @@
-const Input = () => {
-  
+const Input = ({ handleChange, addTask, input }) => {
   return (
-    <div>
-      <label>Input Task: </label>
-      <input type="text" name="task"/>
-      <button className="add-button">Add</button>
-    </div>
-  )
-}
+      <div>
+          <input
+              type="text"
+              value={input}
+              onChange={handleChange}
+          />
+          <button onClick={addTask}>Add Task</button>
+      </div>
+  );
+};
 
-export default Input
+export default Input;
